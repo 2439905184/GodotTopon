@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.godotengine.godot"
+    android:versionCode="1"
+    android:versionName="1.0" > <!-- Should match the mindSdk and targetSdk values in platform/android/java/app/config.gradle -->
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="30" />
+
+    <instrumentation
+        android:name=".GodotInstrumentation"
+        android:icon="@mipmap/icon"
+        android:label="@string/godot_project_name_string"
+        android:targetPackage="org.godotengine.godot" />
+
+    <application>
+
+        <!-- Records the version of the Godot library -->
+        <meta-data
+            android:name="org.godotengine.library.version"
+            android:value="3.4.2.stable" />
+
+        <service android:name="org.godotengine.godot.GodotDownloaderService" />
+    </application>
+
+</manifest>

@@ -1,0 +1,3 @@
+configurations.maybeCreate("default")
+//如果需要使用其他版本的godot请自行替换aar文件
+artifacts.add("default", file('godot-lib.3.4.2.stable.release.aar'))
