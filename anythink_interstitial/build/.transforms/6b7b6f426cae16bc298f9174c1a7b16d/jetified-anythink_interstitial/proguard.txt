@@ -1,0 +1,28 @@
+-keep class com.anythink.** { *; }
+-keepclassmembers class com.anythink.** {
+   *;
+}
+
+-keep public class com.anythink.network.**
+-keepclassmembers class com.anythink.network.** {
+   public *;
+}
+
+-dontwarn com.anythink.**
+-dontwarn com.adjust.**
+-dontwarn com.appsflyer.**
+
+-keep class com.anythink.pd.**{ *;}
+
+-keep class com.anythink.basead.ui.**{ *;}
+-keepclassmembers public class com.anythink.basead.ui.** {
+   public *;
+}
+
+-keep class com.anythink.expressad.** {*; }
+-keep interface com.anythink.expressad.** {*; }
+
+-keep class com.anythink.core.common.ui.**{ *;}
+-keepclassmembers public class com.anythink.core.common.ui.** {
+   public *;
+}

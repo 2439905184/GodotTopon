@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion '28.0.3'
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
 
     defaultConfig {
         minSdkVersion 16
-        compileSdkVersion 28
-        targetSdkVersion 28
+        compileSdkVersion 29
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
@@ -30,14 +30,33 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+    //引擎依赖
+    compileOnly project(':godot-lib.release')
+    //topon依赖
+    compileOnly project(path: ':anythink_native')
+    compileOnly project(path: ':anythink_rewardvideo')
+    compileOnly project(path: ':anythink_splash')
+    compileOnly project(path: ':anythink_network_baidu')
+    compileOnly project(path: ':anythink_network_kuaishou')
+    compileOnly project(':anythink_core')
+    compileOnly project(':anythink_interstitial')
+    compileOnly project(':anythink_china_core')
+    compileOnly project(':anythink_banner')
+    //第三方广告sdk
+    compileOnly project(path: ':Baidu_MobAds_SDK-release_v9.19')
+    compileOnly project(path: ':tramini_sdk')
+    compileOnly project(path: ':kssdk-ad-3.3.21')
+    //topon jar依赖
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.1.0'
-    compileOnly project(':godot-lib.release')
-    //Support (Necessary)
+
+    //强制依赖 (Necessary)
     api "com.android.support:appcompat-v7:28.0.0"
-    //快手
+    //快手强制依赖
     api "com.android.support:design:28.0.0"
+    //单元测试
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

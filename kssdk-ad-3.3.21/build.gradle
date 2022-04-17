@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('kssdk-ad-3.3.21-publishRelease-9745a91dc.aar'))

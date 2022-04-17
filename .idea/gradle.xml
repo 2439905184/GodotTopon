@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -7,13 +8,25 @@
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="F:/gradlebin/gradle-6.5.1-bin/gradle-6.5.1" />
-        <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Baidu_MobAds_SDK-release_v9.19" />
             <option value="$PROJECT_DIR$/ToponGodot" />
-            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/anythink_banner" />
+            <option value="$PROJECT_DIR$/anythink_china_core" />
+            <option value="$PROJECT_DIR$/anythink_core" />
+            <option value="$PROJECT_DIR$/anythink_interstitial" />
+            <option value="$PROJECT_DIR$/anythink_native" />
+            <option value="$PROJECT_DIR$/anythink_network_baidu" />
+            <option value="$PROJECT_DIR$/anythink_network_kuaishou" />
+            <option value="$PROJECT_DIR$/anythink_rewardvideo" />
+            <option value="$PROJECT_DIR$/anythink_splash" />
             <option value="$PROJECT_DIR$/godot-lib.release" />
+            <option value="$PROJECT_DIR$/kssdk-ad-3.3.21" />
+            <option value="$PROJECT_DIR$/localReop" />
+            <option value="$PROJECT_DIR$/localReop/anythink_china_core" />
+            <option value="$PROJECT_DIR$/tramini_sdk" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
