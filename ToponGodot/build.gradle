@@ -52,10 +52,10 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.1.0'
 
-    //强制依赖 (Necessary)
-    api "com.android.support:appcompat-v7:28.0.0"
-    //快手强制依赖
-    api "com.android.support:design:28.0.0"
+    //强制依赖 (Necessary)28.0.0 尝试替换成comileOnly
+    api "com.android.support:appcompat-v7:29.0.0"
+    //快手强制依赖 28.0.0
+    api "com.android.support:design:29.0.0"
     //单元测试
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

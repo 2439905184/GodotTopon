@@ -32,6 +32,7 @@ public class ToponGodot extends GodotPlugin
         ctx = getActivity().getApplicationContext();
         ATSDK.init(getActivity().getApplicationContext(),appid,appkey);
         ATSDK.setNetworkLogDebug(true);
+        Log.d("ToponGodot","sdk初始化方法已被调用");
     }
     //激励广告
     @UsedByGodot
@@ -92,6 +93,14 @@ public class ToponGodot extends GodotPlugin
                 Log.d(tag, "可以获得广告奖励");
             }
         });
+        if (videoAd.isAdReady())
+        {
+            Log.d(tag, "激励广告准备就绪");
+            videoAd.show(getActivity());
+        } else {
+            Log.d(tag, "激励广告未就绪，正在加载中");
+            videoAd.load();
+        }
     }
     //todo 开屏广告
     @UsedByGodot
@@ -159,6 +168,16 @@ public class ToponGodot extends GodotPlugin
                 Log.d(tag, adError.getFullErrorInfo());
             }
         });
+        if (ad.isAdReady())
+        {
+            Log.d(tag, "插屏广告准备就绪");
+            ad.show(getActivity());
+        }
+        else
+            {
+                Log.d(tag, "插屏广告未就绪，正在加载中");
+                ad.load();
+        }
         ad.show(getActivity());
     }
     //获取手机硬件信息 用于测试
